@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "dashboard": "Dashboard"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "language": "Language"
+  },
+  "products": {
+    "title": "Our Products",
+    "discover": "Discover Amazing Products",
+    "subtitle": "Browse and manage your product collection with ease.",
+    "price": "Price",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "reviews": "Reviews",
+    "related": "Related Products",
+    "productsCount": "Products",
+    "noProducts": "No Products Yet",
+    "noProductsDesc": "Start building your store by adding your first product.",
+    "createProduct": "Create Product",
+    "noResults": "No matching products",
+    "noResultsDesc": "Try a different search term.",
+    "recentlyViewed": "Recently Viewed",
+    "clearHistory": "Clear History",
+    "sortDefault": "Default",
+    "sortPriceLow": "Price: Low to High",
+    "sortPriceHigh": "Price: High to Low",
+    "sortNewest": "Newest First"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "checkout": "Proceed to Checkout",
+    "total": "Total Amount",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "update": "Update Cart"
+  },
+  "footer": {
+    "rights": "All Rights Reserved",
+    "about": "About Us",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

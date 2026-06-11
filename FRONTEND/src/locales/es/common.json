@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "cart": "Carrito",
+    "profile": "Perfil",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "dashboard": "Panel"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "language": "Idioma"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "discover": "Descubre Productos Increíbles",
+    "subtitle": "Navega y gestiona tu colección de productos fácilmente.",
+    "price": "Precio",
+    "addToCart": "Agregar al Carrito",
+    "outOfStock": "Agotado",
+    "description": "Descripción",
+    "reviews": "Reseñas",
+    "related": "Productos Relacionados",
+    "productsCount": "Productos",
+    "noProducts": "Sin Productos Aún",
+    "noProductsDesc": "Comienza tu tienda agregando tu primer producto.",
+    "createProduct": "Crear Producto",
+    "noResults": "Sin productos coincidentes",
+    "noResultsDesc": "Intenta con otro término de búsqueda.",
+    "recentlyViewed": "Vistos Recientemente",
+    "clearHistory": "Limpiar Historial",
+    "sortDefault": "Predeterminado",
+    "sortPriceLow": "Precio: Menor a Mayor",
+    "sortPriceHigh": "Precio: Mayor a Menor",
+    "sortNewest": "Más Recientes"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "checkout": "Proceder al Pago",
+    "total": "Monto Total",
+    "remove": "Eliminar",
+    "quantity": "Cantidad",
+    "update": "Actualizar Carrito"
+  },
+  "footer": {
+    "rights": "Todos los Derechos Reservados",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

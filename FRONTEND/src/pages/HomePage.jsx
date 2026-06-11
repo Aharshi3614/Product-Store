@@ -5,12 +5,14 @@ import {
   HStack, useDisclosure,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useProductStore, useRecentlyViewed } from "../store/product";
 import ProductCard from "../components/ui/ProductCard";
 import Footer from "../components/ui/footer";
 import ScrollToTop from "../components/ui/ScrollToTop";
 
 const HomePage = () => {
+  const { t } = useTranslation();
   const { fetchProducts, products, searchQuery } = useProductStore();
   const { recentlyViewed, clearRecentlyViewed } = useRecentlyViewed();
   const [sort, setSort] = useState("");
@@ -41,7 +43,7 @@ const HomePage = () => {
             bgClip="text"
             textAlign="center"
           >
-            Current Products🚀
+            {t('products.title')} 🛒
           </Text>
 
           <Select
@@ -50,10 +52,10 @@ const HomePage = () => {
             maxW="250px"
             aria-label="Sort products"
           >
-            <option value="">Default</option>
-            <option value="price_asc">Price: Low to High</option>
-            <option value="price_desc">Price: High to Low</option>
-            <option value="newest">Newest First</option>
+            <option value="">{t('products.sortDefault')}</option>
+            <option value="price_asc">{t('products.sortPriceLow')}</option>
+            <option value="price_desc">{t('products.sortPriceHigh')}</option>
+            <option value="newest">{t('products.sortNewest')}</option>
           </Select>
 
           <VStack gap={2}>
@@ -64,11 +66,11 @@ const HomePage = () => {
               bgClip="text"
               textAlign="center"
             >
-              Discover Amazing Products 🚀
+              {t('products.discover')} 🛒
             </Text>
 
             <Text color={labelColor} textAlign="center" maxW="600px">
-              Browse and manage your product collection with ease.
+              {t('products.subtitle')}
             </Text>
 
             <Box
@@ -86,8 +88,7 @@ const HomePage = () => {
                 boxShadow: "lg",
               }}
             >
-              <Text fontSize="sm">Products</Text>
-
+              <Text fontSize="sm">{t('products.productsCount')}</Text>
               <Text fontSize="2xl" fontWeight="bold">
                 {filteredProducts.length}
               </Text>
@@ -95,11 +96,7 @@ const HomePage = () => {
           </VStack>
 
           <SimpleGrid
-            columns={{
-              base: 1,
-              md: 2,
-              lg: 3,
-            }}
+            columns={{ base: 1, md: 2, lg: 3 }}
             spacing={10}
             w="full"
           >
@@ -111,22 +108,16 @@ const HomePage = () => {
           {products.length === 0 && (
             <VStack gap={4} py={12}>
               <Image
-                  src="/empty-state.svg"
-                  alt="Empty products"
-                  width={{
-                  base: "200px",
-                  md: "300px",
-                  lg: "400px",
-                }}
+                src="/empty-state.svg"
+                alt="Empty products"
+                width={{ base: "200px", md: "300px", lg: "400px" }}
                 objectFit="contain"
               />
-
               <Text fontSize="2xl" fontWeight="bold">
-                No Products Yet
+                {t('products.noProducts')}
               </Text>
-
               <Text color={labelColor} textAlign="center">
-                Start building your store by adding your first product.
+                {t('products.noProductsDesc')}
               </Text>
               <Link to="/create">
                 <Button
@@ -137,9 +128,7 @@ const HomePage = () => {
                     transform: "translateY(-3px) scale(1.05)",
                     boxShadow: "xl",
                   }}
-                  _active={{
-                    transform: "scale(0.98)",
-                  }}
+                  _active={{ transform: "scale(0.98)" }}
                   sx={{
                     "@keyframes pulse": {
                       "0%": { boxShadow: "0 0 0 0 rgba(66, 153, 225, 0.6)" },
@@ -148,7 +137,7 @@ const HomePage = () => {
                     },
                   }}
                 >
-                  Create Product 
+                  {t('products.createProduct')}
                 </Button>
               </Link>
             </VStack>
@@ -156,27 +145,25 @@ const HomePage = () => {
 
           {products.length > 0 && filteredProducts.length === 0 && (
             <VStack gap={4} py={12}>
-              <Text fontSize="6xl">🔎</Text>
-
+              <Text fontSize="6xl">🔍</Text>
               <Text fontSize="2xl" fontWeight="bold">
-                No matching products
+                {t('products.noResults')}
               </Text>
-
               <Text color={labelColor} textAlign="center">
-                Try a different search term.
+                {t('products.noResultsDesc')}
               </Text>
             </VStack>
           )}
         </VStack>
       </Container>
 
-    {recentlyViewed.length > 0 && (
+      {recentlyViewed.length > 0 && (
         <Button
           position="fixed" bottom="20px" right="20px"
           zIndex={99} colorScheme="teal" size="sm" shadow="lg"
           onClick={onDrawerOpen}
         >
-          Recently Viewed ({recentlyViewed.length})
+          {t('products.recentlyViewed')} ({recentlyViewed.length})
         </Button>
       )}
 
@@ -184,7 +171,7 @@ const HomePage = () => {
         <DrawerOverlay />
         <DrawerContent bg={drawerBg}>
           <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth="1px">Recently Viewed</DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px">{t('products.recentlyViewed')}</DrawerHeader>
           <DrawerBody px={3} py={4}>
             <VStack spacing={3} align="stretch">
               {recentlyViewed.map((p) => (
@@ -207,7 +194,7 @@ const HomePage = () => {
           </DrawerBody>
           <DrawerFooter borderTopWidth="1px">
             <Button size="sm" variant="ghost" colorScheme="red" onClick={clearRecentlyViewed}>
-              Clear History
+              {t('products.clearHistory')}
             </Button>
           </DrawerFooter>
         </DrawerContent>
